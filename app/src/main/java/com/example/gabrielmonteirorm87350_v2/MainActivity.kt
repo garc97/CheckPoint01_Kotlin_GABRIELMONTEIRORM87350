@@ -11,7 +11,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Crie uma lista de objetos Serie com os detalhes necessários (parte g)
         val seriesList = mutableListOf(
             Serie("Nome1", "Genero1", true),
             Serie("Nome2", "Genero2", true),
@@ -19,9 +18,9 @@ class MainActivity : AppCompatActivity() {
             Serie("Nome4", "Genero4", true)
         )
 
-        // Configure o RecyclerView com um LinearLayoutManager e o adapter (partes f e b)
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = SeriesAdapter(seriesList)
     }
 }
+
