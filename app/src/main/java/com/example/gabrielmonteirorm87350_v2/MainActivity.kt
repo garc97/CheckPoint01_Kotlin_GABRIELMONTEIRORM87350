@@ -12,10 +12,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val seriesList = mutableListOf(
-            Serie("Nome1", "Genero1", true),
-            Serie("Nome2", "Genero2", true),
-            Serie("Nome3", "Genero3", false),
-            Serie("Nome4", "Genero4", true)
+            Serie("Avatar", "Aventura", true),
+            Serie("Barbie", "Aventura", true),
+            Serie("Lost", "Melodrama", false),
+            Serie("Naruto", "Anime", true)
         )
 
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)

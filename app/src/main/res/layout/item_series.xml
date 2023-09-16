@@ -1,34 +1,56 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="16dp">
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
 
-    <ImageButton
-        android:id="@+id/iconImageButton"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?android:attr/selectableItemBackgroundBorderless"
-        android:src="@drawable/ic_positive" />
+        android:padding="16dp">
 
-    <TextView
-        android:id="@+id/nameTextView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Nome da Série"
-        android:textSize="16sp" />
+        <ImageButton
+            android:id="@+id/iconImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_positive"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
-    <TextView
-        android:id="@+id/genreTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Gênero"
-        android:textSize="14sp" />
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Nome da Série"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/iconImageButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/deleteButton"
+            app:layout_constraintBottom_toTopOf="@+id/genreTextView" />
 
-    <Button
-        android:id="@+id/deleteButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Excluir" />
-</LinearLayout>
+        <TextView
+            android:id="@+id/genreTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Gênero"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/nameTextView"
+            app:layout_constraintEnd_toEndOf="@+id/nameTextView"
+            app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Excluir"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
